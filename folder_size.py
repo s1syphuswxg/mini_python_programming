@@ -26,6 +26,7 @@ for (path, dirs, files) in os.walk(directory):      # Walk through all the direc
         dir_size += os.path.getsize(filename)       # Add the size of each file in the root dir to get the total size.
 
 fsizeList = [str(round(fsizedicr[key] * dir_size, 2)) + " " + key for key in fsizedicr] # List of units
+print(fsizeList)
 
 if dir_size == 0: print ("File Empty") # Sanity check to eliminate corner-case of empty file.
 else:
